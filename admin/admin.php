@@ -43,9 +43,9 @@ class don8Settings {
 
 			<form method="post" action="options.php">
 				<?php settings_fields( 'don8_settings' );
-				$email    = get_option( 'don8_paypal_email' );
+				$email    = get_option( 'don8_paypal_email' ) ? get_option( 'don8_paypal_email' ) : get_option( 'admin_email' );
 				$currency = get_option( 'don8_currency' );
-				$button = get_option( 'don8_button' );
+				$button   = get_option( 'don8_button' );
 				?>
 				<h3>Donation default values</h3>
 
